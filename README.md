@@ -4,50 +4,76 @@
 
 该数据集中含有水库、泉水、河流、湖泊四类水体的有关的对应城市数据，而本篇报告则关注地下水的水位问题，数据集是Petrignano有关地下水的信息，包括八个变量，分别是：
 
-\textbf{时间}:(date)表示检测该条数据监测的时间，精确到以天为单位。
+时间:(date)表示检测该条数据监测的时间，精确到以天为单位。
 
-\textbf{降雨量}:(Rainfall\_Bastia\_Umbra)表示意大利城市巴斯蒂亚温布拉的降雨量，单位为毫米（mm）.
+降雨量:(Rainfall\_Bastia\_Umbra)表示意大利城市巴斯蒂亚温布拉的降雨量，单位为毫米（mm）.
 
-\textbf{水位}:(Depth\_to\_Groundwater\_P24)(Depth\_to\_Groundwater\_P25):它表示由测压计P24,P25检测到的地下水位，以距离地面的高度表示，单位为米(m)。
+水位:(Depth\_to\_Groundwater\_P24)(Depth\_to\_Groundwater\_P25):它表示由测压计P24,P25检测到的地下水位，以距离地面的高度表示，单位为米(m)。
 
-\textbf{温度}(Temperature\_Bastia\_Umbra):表示巴斯蒂亚温布拉测温站检测到的温度，单位为°C.
+温度(Temperature\_Bastia\_Umbra):表示巴斯蒂亚温布拉测温站检测到的温度，单位为°C.
 
-\textbf{温度}:(Temperature\_Petrignano):表示在彼得里尼亚诺处检测到的温度，单位为°C.
+温度:(Temperature\_Petrignano):表示在彼得里尼亚诺处检测到的温度，单位为°C.
 
-\textbf{排水量}:(Volume\_C10):表示提取的饮用水的体积，单位为立方米($m^3$).
+排水量:(Volume\_C10):表示提取的饮用水的体积，单位为立方米($m^3$).
 
-\textbf{河水深度}:(Hydrometry\_H):表示水文站检测到的地下水位，单位为米（m）.
+河水深度:(Hydrometry\_H):表示水文站检测到的地下水位，单位为米（m）.
 
-在本篇分析报告中，建立了五种模型对地下水深度进行预测，并用MAE与RMSE为度量进行模型的比较。
+在本篇分析报告中，建立了五种模型，通过自变量对地下水深度进行预测，并用MAE与RMSE为度量进行模型的比较。
 
 进行复现时，所配置的环境如下：
 
 Package                 Version
+
 ----------------------- ------------
+
 absl-py                 1.4.0
+
 aiohttp                 3.9.0
+
 aiosignal               1.2.0
+
 arviz                   0.16.0
+
 asttokens               2.4.1
+
 astunparse              1.6.3
+
 async-timeout           4.0.2
+
 attrs                   23.1.0
+
 blinker                 1.6.2
+
 Bottleneck              1.3.5
+
 Brotli                  1.0.9
+
 cachetools              4.2.2
+
 certifi                 2023.11.17
+
 cffi                    1.16.0
+
 charset-normalizer      2.0.4
+
 click                   8.1.7
+
 cmdstanpy               1.1.0
+
 colorama                0.4.6
+
 comm                    0.1.4
+
 contourpy               1.2.0
+
 convertdate             2.3.2
+
 cryptography            41.0.3
+
 cycler                  0.11.0
+
 Cython                  3.0.0
+
 debugpy                 1.8.0
 decorator               5.1.1
 ephem                   4.1.2
